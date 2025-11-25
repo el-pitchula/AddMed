@@ -6,6 +6,7 @@ npm install @react-navigation/native-stack
 expo install @react-native-community/datetimepicker
 npm install uuid
 npm install --save-dev @types/uuid
+npm install --save-dev @types/react @types/react-native
 
 para rodar:
 npm install

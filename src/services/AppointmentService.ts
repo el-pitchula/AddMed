@@ -1,4 +1,4 @@
-import { Appointment } from "../models/Appointment";
+import { Appointment } from "../../../src/models/Appointment";
 
 const appointments: Appointment[] = [];
 
