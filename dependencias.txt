@@ -16,6 +16,7 @@ npx expo start
 a
 
 
+
 npm remove @react-navigation/native @react-navigation/native-stack
 
 npm install @react-navigation/native@^6 \
