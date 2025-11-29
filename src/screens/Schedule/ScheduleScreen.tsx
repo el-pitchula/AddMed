@@ -5,7 +5,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../navigation/AppNavigator";
 import { AppointmentService } from "../../services/AppointmentService";
 import { Appointment } from "../../models/Appointment";
-import { v4 as uuidv4 } from "uuid";  // pode instalar uuid para gerar id
+import { v4 as uuidv4 } from "uuid";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Schedule">;
 
@@ -15,20 +15,18 @@ export default function ScheduleScreen({ navigation }: Props) {
 
   function onChangeDate(event: any, selectedDate?: Date) {
     setShowDatePicker(false);
-    if (selectedDate) {
-      setDate(selectedDate);
-    }
+    if (selectedDate) setDate(selectedDate);
   }
 
   function handleConfirm() {
     const newAppointment: Appointment = {
       id: uuidv4(),
-      doctor: "Dr. Fulano",  // para agora, pode deixar fixo ou usar outro picker
+      doctor: "Dr. Fulano",
       date: date.toLocaleDateString(),
       time: date.toLocaleTimeString(),
     };
     AppointmentService.add(newAppointment);
-    navigation.goBack();  // volta para a Home
+    navigation.goBack();
   }
 
   return (

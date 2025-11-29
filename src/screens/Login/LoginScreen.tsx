@@ -10,7 +10,6 @@ export default function LoginScreen({ navigation }: Props) {
   const [password, setPassword] = useState("");
 
   function handleLogin() {
-    // para agora, só navega direto para a Home
     navigation.replace("Home");
   }
 
@@ -26,7 +25,7 @@ export default function LoginScreen({ navigation }: Props) {
         placeholder="Senha"
         value={password}
         onChangeText={setPassword}
-        secureTextEntry
+        secureTextEntry={true}
         style={styles.input}
       />
       <Button title="Entrar" onPress={handleLogin} />
