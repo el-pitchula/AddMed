@@ -13,7 +13,7 @@ export default function Listar({ voltar }) {
       {lista.map((item, index) => (
         <View key={index} style={styles.card}>
           <Text>Paciente: {item.paciente}</Text>
-          <Text>Data: {item.data}</Text>
+          <Text>Data:  {item.data}</Text>
           <Text>Hora: {item.hora}</Text>
         </View>
       ))}
@@ -21,6 +21,7 @@ export default function Listar({ voltar }) {
       <TouchableOpacity onPress={voltar}>
         <Text style={styles.back}>Voltar</Text>
       </TouchableOpacity>
+        
     </View>
   );
 }
